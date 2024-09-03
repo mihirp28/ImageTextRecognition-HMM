@@ -6,6 +6,7 @@ Our goal is to recognize text in an image - e.g., to recognize that **Figure 3**
   python3 ./image2text.py train-image-file.png train-text.txt test-image-file.png
 
 The program should load in the train-image-file, which contains images of letters to use for training (we’ve supplied one for you). It should also load in the text training file, which is simply some text document that is representative of the language (English, in this case) that will be recognized. (The training file from Part 1 could be a good choice). Then, it should use the classifier it has learned to detect the text in test-image-file.png, using (1) the simple Bayes net of Figure 1 and (2) the HMM of Fig 2 with MAP inference (Viterbi). The last two lines of output from your program should be these two results, as follows: 
+
   python3 ./image2text.py train-image-file.png train-text.txt test-image-file.png
   Simple: 1t 1s so orcerec.
   HMM: It is so ordered.
