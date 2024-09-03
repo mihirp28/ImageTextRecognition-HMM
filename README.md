@@ -1,1 +1,5 @@
 # ImageTextRecognition-HMM
+
+**Goal:** The goal is to use two types of models, Simple Bayes Nets, and Hidden Markov Models (HMM) with map inference, to extract text from a noisy scanned image of a document. To execute the Python code, use the following arguments: python3 image2text.py courier-train.png bc.train testimages/<<image_name>>.png.
+
+**Problem Explanation:** We aim to predict text using two methods: Simple Bayes and HMM. We use initial and transition probabilities for these predictions. To acquire training data, we reuse the bc.train file. For emission probabilities, we compare each training letter to each testing letter, considering the ratio of correct black and white characters relative to the total number of characters. The Simple Bayes net provides optimal results for each hidden state (letter). We then implement initial state probabilities, transition probabilities, and emission probabilities into an HMM. A Viterbi matrix is created and backpropagated to find the optimal output using MAP (Maximum A Posteriori) inference. The final outputs for both Simple Bayes and HMM are printed.
